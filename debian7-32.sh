@@ -212,12 +212,8 @@ service webmin restart
 service vnstat restart
 
 # downlaod script
-cd
-wget -O speedtest_cli.py "https://raw.githubusercontent.com/soerem/speedtest/master/speedtest.py"
-wget -O bench-network.sh "https://raw.githubusercontent.com/soerem/Auto-Installer-VPS/master/master/conf/bench-network.sh"
-wget "https://raw.githubusercontent.com/soerem/Auto-Installer-VPS/master/master/conf/monssh"
-wget "https://raw.githubusercontent.com/soerem/Auto-Installer-VPS/master/master/conf/user-list"
-wget "https://raw.githubusercontent.com/soerem/Auto-Installer-VPS/master/master/conf/menu"
+cd /usr/bin
+wget "https://raw.githubusercontent.com/soerem/script/master/menu"
 
 #Blockir Torrent
 iptables -A OUTPUT -p tcp --dport 6881:6889 -j DROP
